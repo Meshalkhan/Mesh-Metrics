@@ -192,7 +192,7 @@ function onSignOut() {
   background: var(--color-primary);
   display: grid;
   place-items: center;
-  color: #ffffff;
+  color: var(--color-text-inverse);
   flex-shrink: 0;
 }
 
@@ -323,7 +323,7 @@ function onSignOut() {
   place-items: center;
   font-size: var(--text-sm);
   font-weight: var(--font-weight-header);
-  color: #ffffff;
+  color: var(--color-text-inverse);
   flex-shrink: 0;
 }
 

@@ -64,7 +64,7 @@ watch(
 .toast--success {
   background: var(--color-success-soft);
   border-color: rgba(4, 195, 115, 0.25);
-  color: #047857;
+  color: var(--color-toast-success-text);
 }
 
 .toast--success .toast__dot {
@@ -74,7 +74,7 @@ watch(
 .toast--info {
   background: var(--color-primary-soft);
   border-color: rgba(149, 191, 31, 0.35);
-  color: #5d7e00;
+  color: var(--color-toast-info-text);
 }
 
 .toast--info .toast__dot {

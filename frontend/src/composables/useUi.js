@@ -18,6 +18,9 @@ export function useUi() {
     clearNotifications: store.clearNotifications,
     showToast: store.showToast,
     clearToast: store.clearToast,
+    initTheme: store.initTheme,
+    setTheme: store.setTheme,
+    toggleTheme: store.toggleTheme,
     signOut: store.signOut
   };
 }

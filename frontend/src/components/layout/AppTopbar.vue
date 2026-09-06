@@ -32,6 +32,8 @@
         <span class="topbar__hotkey">{{ hotkeyLabel }}</span>
       </div>
 
+      <ThemeToggle />
+
       <div class="topbar__notify" v-click-outside="closeNotifications">
         <button
           type="button"
@@ -83,6 +85,7 @@
 <script setup>
 import { computed, onMounted, onUnmounted, ref } from "vue";
 import BaseIcon from "../ui/BaseIcon.vue";
+import ThemeToggle from "../ui/ThemeToggle.vue";
 import { useUi } from "../../composables/useUi.js";
 
 defineProps({
@@ -169,7 +172,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown));
   width: 40px;
   height: 40px;
   border-radius: var(--radius-md);
-  background: #fafafa;
+  background: var(--color-surface-elevated);
   border: 1px solid var(--color-border);
   color: var(--color-text-muted);
   place-items: center;
@@ -211,7 +214,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown));
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  background: #fafafa;
+  background: var(--color-surface-elevated);
   border: 1px solid var(--color-border);
   padding: 8px 12px;
   border-radius: var(--radius-sm);
@@ -256,7 +259,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown));
   width: 40px;
   height: 40px;
   border-radius: var(--radius-md);
-  background: #fafafa;
+  background: var(--color-surface-elevated);
   border: none;
   color: var(--color-text-muted);
   display: grid;

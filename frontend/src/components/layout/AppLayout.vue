@@ -82,7 +82,7 @@ watch(sidebarOpen, (open) => {
     display: block;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.35);
+    background: var(--color-overlay);
     z-index: 90;
   }
 

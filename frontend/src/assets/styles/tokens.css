@@ -1,10 +1,13 @@
-:root {
-  /* Craftsman dashboard palette */
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
   --color-bg: #f4f4f4;
   --color-bg-div: #f2f2f2;
   --color-bg-icon: #e5e5e5;
   --color-surface: #ffffff;
   --color-surface-muted: #f2f2f2;
+  --color-surface-elevated: #fafafa;
   --color-border: #e5e5e5;
   --color-border-strong: #dadada;
 
@@ -12,6 +15,7 @@
   --color-text-muted: #4d4d4d;
   --color-text-subtle: #7e7e7e;
   --color-text-header: #474747;
+  --color-text-inverse: #ffffff;
 
   --color-primary: #95bf1f;
   --color-primary-strong: #7a9e18;
@@ -24,7 +28,6 @@
   --color-danger-soft: rgba(255, 0, 4, 0.1);
   --color-warning: #f59e0b;
 
-  /* Light sidebar (Craftsman admin) */
   --color-sidebar: #ffffff;
   --color-sidebar-elevated: #ffffff;
   --color-sidebar-text: #4d4d4d;
@@ -34,6 +37,103 @@
   --color-sidebar-active: #000000;
   --color-sidebar-active-text: #ffffff;
 
+  --color-btn-primary-bg: #000000;
+  --color-btn-primary-bg-hover: #1f2937;
+  --color-btn-primary-text: #ffffff;
+  --color-btn-border: rgba(0, 0, 0, 0.5);
+
+  --color-badge-neutral-bg: #e2e2e2;
+  --color-badge-neutral-text: #000000;
+
+  --color-chart-text: #4d4d4d;
+  --color-chart-tick: #7e7e7e;
+  --color-chart-grid: rgba(0, 0, 0, 0.06);
+  --color-chart-tooltip-bg: #000000;
+  --color-chart-tooltip-text: #ffffff;
+
+  --color-scrollbar-thumb: rgba(0, 0, 0, 0.2);
+  --color-scrollbar-thumb-hover: rgba(0, 0, 0, 0.3);
+
+  --color-overlay: rgba(0, 0, 0, 0.35);
+  --color-skeleton-from: rgba(229, 229, 229, 0.6);
+  --color-skeleton-mid: rgba(242, 242, 242, 0.95);
+  --color-skeleton-to: rgba(229, 229, 229, 0.6);
+  --color-toast-success-text: #047857;
+  --color-toast-info-text: #5d7e00;
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 20px 33px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-bg: #0f1115;
+  --color-bg-div: #151922;
+  --color-bg-icon: #1c2230;
+  --color-surface: #171b24;
+  --color-surface-muted: #1c2230;
+  --color-surface-elevated: #1f2533;
+  --color-border: #2a3140;
+  --color-border-strong: #353d4f;
+
+  --color-text: #f3f5f9;
+  --color-text-muted: #b4bcc9;
+  --color-text-subtle: #8b95a7;
+  --color-text-header: #d7dde7;
+  --color-text-inverse: #0f1115;
+
+  --color-primary: #a8d632;
+  --color-primary-strong: #95bf1f;
+  --color-primary-soft: rgba(168, 214, 50, 0.14);
+  --color-accent: #22d977;
+
+  --color-success: #34d399;
+  --color-success-soft: rgba(52, 211, 153, 0.12);
+  --color-danger: #ff5a5d;
+  --color-danger-soft: rgba(255, 90, 93, 0.14);
+  --color-warning: #fbbf24;
+
+  --color-sidebar: #12161f;
+  --color-sidebar-elevated: #171b24;
+  --color-sidebar-text: #b4bcc9;
+  --color-sidebar-muted: #8b95a7;
+  --color-sidebar-border: #2a3140;
+  --color-sidebar-hover: #1c2230;
+  --color-sidebar-active: #a8d632;
+  --color-sidebar-active-text: #0f1115;
+
+  --color-btn-primary-bg: #a8d632;
+  --color-btn-primary-bg-hover: #95bf1f;
+  --color-btn-primary-text: #0f1115;
+  --color-btn-border: rgba(255, 255, 255, 0.18);
+
+  --color-badge-neutral-bg: #2a3140;
+  --color-badge-neutral-text: #f3f5f9;
+
+  --color-chart-text: #b4bcc9;
+  --color-chart-tick: #8b95a7;
+  --color-chart-grid: rgba(255, 255, 255, 0.08);
+  --color-chart-tooltip-bg: #1f2533;
+  --color-chart-tooltip-text: #f3f5f9;
+
+  --color-scrollbar-thumb: rgba(255, 255, 255, 0.18);
+  --color-scrollbar-thumb-hover: rgba(255, 255, 255, 0.28);
+
+  --color-overlay: rgba(0, 0, 0, 0.6);
+  --color-skeleton-from: rgba(42, 49, 64, 0.6);
+  --color-skeleton-mid: rgba(58, 66, 82, 0.95);
+  --color-skeleton-to: rgba(42, 49, 64, 0.6);
+  --color-toast-success-text: #6ee7b7;
+  --color-toast-info-text: #c5e86c;
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+:root {
   --radius-xs: 8px;
   --radius-sm: 15px;
   --radius-md: 25px;
@@ -48,10 +148,6 @@
   --space-6: 20px;
   --space-8: 24px;
   --space-10: 32px;
-
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
-  --shadow-lg: 0 20px 33px rgba(0, 0, 0, 0.05);
 
   --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;

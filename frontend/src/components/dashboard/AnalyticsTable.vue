@@ -203,7 +203,7 @@ thead th.is-sortable:hover {
 
 tbody td {
   padding: 6px 12px;
-  border-bottom: 0.6px solid #dadada;
+  border-bottom: 0.6px solid var(--color-border-strong);
   font-size: 12px;
   font-weight: 500;
   color: var(--color-text);
@@ -236,7 +236,7 @@ tbody tr:hover td {
   height: 32px;
   border-radius: 50%;
   background: var(--color-text);
-  color: #ffffff;
+  color: var(--color-text-inverse);
   font-size: 11px;
   font-weight: var(--font-weight-header);
   display: grid;

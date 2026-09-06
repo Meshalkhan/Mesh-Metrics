@@ -35,7 +35,7 @@ defineProps({
   align-items: center;
   justify-content: center;
   gap: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--color-btn-border);
   border-radius: var(--radius-sm);
   font-weight: var(--font-weight-header);
   font-size: 14px;
@@ -67,13 +67,13 @@ defineProps({
 }
 
 .btn--primary {
-  background: #000;
-  color: #ffffff;
-  border-color: rgba(0, 0, 0, 0.5);
+  background: var(--color-btn-primary-bg);
+  color: var(--color-btn-primary-text);
+  border-color: var(--color-btn-border);
 }
 
 .btn--primary:hover:not(:disabled) {
-  background: #1f2937;
+  background: var(--color-btn-primary-bg-hover);
   transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
@@ -85,8 +85,8 @@ defineProps({
 }
 
 .btn--secondary:hover:not(:disabled) {
-  background: #000;
-  color: #ffffff;
+  background: var(--color-btn-primary-bg);
+  color: var(--color-btn-primary-text);
   transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
@@ -104,7 +104,7 @@ defineProps({
 
 .btn--danger {
   background: var(--color-danger);
-  color: #ffffff;
+  color: var(--color-text-inverse);
   border-color: var(--color-danger);
 }
 

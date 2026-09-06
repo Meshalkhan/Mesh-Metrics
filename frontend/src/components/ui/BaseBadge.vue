@@ -30,8 +30,8 @@ defineProps({
 }
 
 .badge--neutral {
-  background: #e2e2e2;
-  color: #000000;
+  background: var(--color-badge-neutral-bg);
+  color: var(--color-badge-neutral-text);
   border: none;
 }
 

@@ -1,6 +1,12 @@
 import { defineStore } from "pinia";
 import { useAdminStore } from "./admin.store.js";
 import { useAuthStore } from "./auth.store.js";
+import {
+  applyTheme,
+  getStoredTheme,
+  getSystemTheme,
+  persistTheme
+} from "../lib/theme.js";
 
 const initialNotifications = () => [
   {
@@ -34,11 +40,13 @@ export const useUiStore = defineStore("ui", {
     searchQuery: "",
     notificationsOpen: false,
     notifications: initialNotifications(),
-    toast: null
+    toast: null,
+    theme: getStoredTheme() ?? getSystemTheme()
   }),
   getters: {
     unreadCount: (state) => state.notifications.filter((n) => !n.read).length,
-    hasUnread: (state) => state.notifications.some((n) => !n.read)
+    hasUnread: (state) => state.notifications.some((n) => !n.read),
+    isDark: (state) => state.theme === "dark"
   },
   actions: {
     setActiveNav(id) {
@@ -80,6 +88,18 @@ export const useUiStore = defineStore("ui", {
     },
     clearToast() {
       this.toast = null;
+    },
+    initTheme() {
+      this.theme = getStoredTheme() ?? getSystemTheme();
+      applyTheme(this.theme);
+    },
+    setTheme(theme, { persist = true } = {}) {
+      this.theme = theme;
+      if (persist) persistTheme(theme);
+      applyTheme(theme);
+    },
+    toggleTheme() {
+      this.setTheme(this.theme === "dark" ? "light" : "dark");
     },
     signOut() {
       const auth = useAuthStore();

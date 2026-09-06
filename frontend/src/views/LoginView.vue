@@ -1,5 +1,6 @@
 <template>
   <div class="login">
+    <ThemeToggle class="login__theme" />
     <div class="login__panel">
       <div class="login__brand">
         <div class="login__logo" aria-hidden="true">
@@ -44,6 +45,7 @@
 import { ref } from "vue";
 import BaseButton from "../components/ui/BaseButton.vue";
 import BaseCard from "../components/ui/BaseCard.vue";
+import ThemeToggle from "../components/ui/ThemeToggle.vue";
 import { useAuthStore } from "../stores/auth.store.js";
 
 const auth = useAuthStore();
@@ -77,6 +79,13 @@ async function submit() {
   place-items: center;
   padding: var(--space-6);
   background: var(--color-bg);
+  position: relative;
+}
+
+.login__theme {
+  position: absolute;
+  top: var(--space-6);
+  right: var(--space-6);
 }
 
 .login__panel {

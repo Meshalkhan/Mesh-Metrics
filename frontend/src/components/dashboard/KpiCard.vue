@@ -55,7 +55,7 @@ defineProps({
 .kpi:hover .kpi__title,
 .kpi:hover .kpi__value,
 .kpi:hover .kpi__helper {
-  color: #ffffff;
+  color: var(--color-text-inverse);
 }
 
 .kpi__header {
