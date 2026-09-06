@@ -1,0 +1,76 @@
+:root {
+  /* Craftsman dashboard palette */
+  --color-bg: #f4f4f4;
+  --color-bg-div: #f2f2f2;
+  --color-bg-icon: #e5e5e5;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f2f2f2;
+  --color-border: #e5e5e5;
+  --color-border-strong: #dadada;
+
+  --color-text: #000000;
+  --color-text-muted: #4d4d4d;
+  --color-text-subtle: #7e7e7e;
+  --color-text-header: #474747;
+
+  --color-primary: #95bf1f;
+  --color-primary-strong: #7a9e18;
+  --color-primary-soft: rgba(149, 191, 31, 0.1);
+  --color-accent: #00cc6a;
+
+  --color-success: #04c373;
+  --color-success-soft: #f5f9eb;
+  --color-danger: #ff0004;
+  --color-danger-soft: rgba(255, 0, 4, 0.1);
+  --color-warning: #f59e0b;
+
+  /* Light sidebar (Craftsman admin) */
+  --color-sidebar: #ffffff;
+  --color-sidebar-elevated: #ffffff;
+  --color-sidebar-text: #4d4d4d;
+  --color-sidebar-muted: #7e7e7e;
+  --color-sidebar-border: #e5e5e5;
+  --color-sidebar-hover: #f2f2f2;
+  --color-sidebar-active: #000000;
+  --color-sidebar-active-text: #ffffff;
+
+  --radius-xs: 8px;
+  --radius-sm: 15px;
+  --radius-md: 25px;
+  --radius-lg: 30px;
+  --radius-pill: 999px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 10px;
+  --space-4: 12px;
+  --space-5: 16px;
+  --space-6: 20px;
+  --space-8: 24px;
+  --space-10: 32px;
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 20px 33px rgba(0, 0, 0, 0.05);
+
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 0.875rem;
+  --text-lg: 1rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5625rem;
+  --text-3xl: 1.875rem;
+
+  --font-weight-label: 500;
+  --font-weight-header: 600;
+
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+
+  --sidebar-width: 280px;
+  --sidebar-collapsed-width: 80px;
+  --header-height: 70px;
+}

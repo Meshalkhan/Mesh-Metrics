@@ -1,0 +1,47 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: mesh_metrics_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: meshcore
+      POSTGRES_PASSWORD: meshcore
+      POSTGRES_DB: meshcore
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: mesh_metrics_api
+    depends_on:
+      - postgres
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: meshcore
+      DB_USER: meshcore
+      DB_PASSWORD: meshcore
+      JWT_SECRET: super-secret-key
+      JWT_EXPIRES_IN: 1h
+    ports:
+      - "4000:4000"
+
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: mesh_metrics_web
+    depends_on:
+      - api
+    ports:
+      - "5173:80"
+
+volumes:
+  postgres_data:
