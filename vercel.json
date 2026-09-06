@@ -4,16 +4,16 @@
     "web": {
       "root": "frontend",
       "framework": "vite",
-      "installCommand": "cd .. && npm install",
-      "buildCommand": "npm run build",
+      "installCommand": "cd .. && npm install --include=dev",
+      "buildCommand": "cd .. && npm run build:frontend",
       "outputDirectory": "dist"
     },
     "api": {
       "root": "backend",
       "framework": "express",
       "entrypoint": "src/app.ts",
-      "installCommand": "cd .. && npm install",
-      "buildCommand": "npm run build"
+      "installCommand": "cd .. && npm install --include=dev",
+      "buildCommand": "cd .. && npm run build:backend"
     }
   },
   "rewrites": [
