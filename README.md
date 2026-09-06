@@ -6,13 +6,14 @@ Unified SaaS analytics and admin platform — Vue 3 frontend + Express/Postgres 
 
 ```
 mesh-metrics/
-├── api/           Vercel serverless entry (Express handler)
 ├── backend/       Express + TypeScript + PostgreSQL API
 ├── frontend/      Vue 3 + Pinia + Chart.js SPA
 ├── package.json   npm workspaces root
-├── vercel.json    Vercel deploy config
+├── vercel.json    Vercel Services (web + api)
 └── docker-compose.yml
 ```
+
+> **Vercel:** Set the project **Framework Preset** to **Services** in the dashboard. Add `JWT_SECRET` and `DATABASE_URL` as environment variables.
 
 ## Architecture
 
