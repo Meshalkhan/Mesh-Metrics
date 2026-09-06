@@ -13,8 +13,7 @@
       "framework": "express",
       "entrypoint": "src/app.ts",
       "installCommand": "cd .. && npm install",
-      "buildCommand": "npm run build",
-      "maxDuration": 30
+      "buildCommand": "npm run build"
     }
   },
   "rewrites": [
